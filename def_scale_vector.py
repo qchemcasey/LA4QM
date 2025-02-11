@@ -19,8 +19,7 @@ import numpy as np
 
 def scale_vector_np(vector, scalar):
     """
-    Scale a vector by a given scalar using Numpy.
-
+    Scale a vector (bra or ket) by a given scalar using Numpy.
     Args:
         vector (numpy array): The vector to scale.
         scalar (float): The scalar to multiply the vector by.
