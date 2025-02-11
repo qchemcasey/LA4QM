@@ -1,4 +1,4 @@
-# Without Numpy
+# Without Numpy(fix for any number of vectors)
 
 def add_vectors(vector1, vector2):
     """

@@ -1,4 +1,4 @@
-# Without Numpy
+# Without Numpy (Fix for any number of vectors)
 
 def subtract_vectors(vector1, vector2):
     """
