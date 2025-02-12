@@ -12,11 +12,12 @@ def inner_product(bra, ket):
     float: The inner product of the two vectors.
     """
     # Ensure bra is a 1D list
-    if isinstance(bra[0], list):
-        bra = [b[0] for b in bra]
+    if isinstance(ket[0], list):
+        ket = [k[0] for k in ket]
 
     return sum(b * k for b, k in zip(bra, ket))
 
+print(inner_product([3, 4], [[1], [2]]))
 
 # With Numpy
 
