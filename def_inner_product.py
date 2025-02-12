@@ -33,12 +33,12 @@ def inner_product_np(bra, ket):
     Returns:
     float: The inner product of the two vectors.
     """
-    # Ensure bra is a 1D array
-    bra = bra.reshape(-1)
+    if len(bra) != len(ket):
+        raise ValueError("Vectors must be of the same length.")
 
     return np.dot(bra, ket)
 
-bra = np.array([[1], [2], [3]])
-ket = np.array([3, 4, 5])
+ket = np.array([[1], [2]])
+bra = np.array([3, 4])
 
 print(inner_product_np(bra, ket))
