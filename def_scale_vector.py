@@ -1,23 +1,6 @@
-# Without Numpy
-
-def scale_vector(vector, scalar):
-    """
-    Scale a vector (bra or ket) by a given scalar.
-
-    Args:
-        vector (list of float): The vector to scale.
-        scalar (float): The scalar to multiply the vector by.
-
-    Returns:
-        list of float: The scaled vector.
-    """
-    return [component * scalar for component in vector]
-
-# With Numpy
-
 import numpy as np 
 
-def scale_vector_np(vector, scalar):
+def scale_vector(vector, scalar):
     """
     Scale a vector (bra or ket) by a given scalar using Numpy.
     Args:
@@ -28,3 +11,11 @@ def scale_vector_np(vector, scalar):
         numpy array: The scaled vector.
     """
     return np.multiply(vector, scalar)
+
+ket1 = np.array([[1], [0]])
+
+bra1 = np.array([[1, 0]])
+
+print(scale_vector(ket1, 2))  # Should output [[2], [0]]
+print(scale_vector(bra1, 2))  # Should output [[2, 0]]
+

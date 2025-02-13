@@ -1,45 +1,25 @@
-#  Without Numpy
-
-def inner_product(bra, ket):
-    """
-    Calculate the inner product of two vectors.
-    
-    Parameters:
-    bra (list): The bra vector.
-    ket (list): The ket vector.
-    
-    Returns:
-    float: The inner product of the two vectors.
-    """
-    # Ensure bra is a 1D list
-    if isinstance(ket[0], list):
-        ket = [k[0] for k in ket]
-
-    return sum(b * k for b, k in zip(bra, ket))
-
-print(inner_product([3, 4], [[1], [2]]))
-
-# With Numpy
-
 import numpy as np
 
-def inner_product_np(bra, ket):
+def inner_product(bra, ket):
     """
     Calculate the inner product of two vectors using NumPy.
     
     Parameters:
-    bra (numpy.ndarray): The bra vector.
-    ket (numpy.ndarray): The ket vector.
+    bra (numpy.ndarray): The bra vector (1 x n).
+    ket (numpy.ndarray): The ket vector (n x 1).
     
     Returns:
-    float: The inner product of the two vectors.
+    complex: The inner product of the two vectors.
     """
-    if len(bra) != len(ket):
-        raise ValueError("Vectors must be of the same length.")
+    if bra.shape[1] != ket.shape[0]:  # Check for correct dimensions
+        raise ValueError("Bra and ket dimensions do not match for inner product.")
+    inner_prod = (bra @ ket).item()  # Extract scalar value from 2D array
+    return inner_prod
 
-    return np.dot(bra, ket)
+# Example Usage
+ket = np.array([[1], [2]])  # Column vector (2 x 1)
+bra = np.array([[3, 4]])    # Row vector (1 x 2), Hermitian conjugate of |ψ⟩
 
-ket = np.array([[1], [2]])
-bra = np.array([3, 4])
+print(inner_product(bra, ket))  # Expected result: 3*1 + 4*2 = 11
 
-print(inner_product_np(bra, ket))
+print(ket.shape[0], bra.shape[1])  # Expected result: 2 2
