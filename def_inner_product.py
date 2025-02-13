@@ -16,7 +16,9 @@ def inner_product(bra, ket):
     inner_prod = (bra @ ket).item()  # Extract scalar value from 2D array
     return inner_prod
 
-# Example Usage
+
+
+# Test
 ket = np.array([[1], [2]])  # Column vector (2 x 1)
 bra = np.array([[3, 4]])    # Row vector (1 x 2), Hermitian conjugate of |ψ⟩
 

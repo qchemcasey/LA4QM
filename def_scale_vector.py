@@ -12,8 +12,10 @@ def scale_vector(vector, scalar):
     """
     return np.multiply(vector, scalar)
 
-ket1 = np.array([[1], [0]])
 
+
+# Test
+ket1 = np.array([[1], [0]])
 bra1 = np.array([[1, 0]])
 
 print(scale_vector(ket1, 2))  # Should output [[2], [0]]

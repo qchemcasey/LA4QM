@@ -26,6 +26,9 @@ def add_vectors(*vectors):
 
     return result
 
+
+
+# Test
 ket1 = np.array([[1], [0]])
 ket2 = np.array([[0], [1]])
 
