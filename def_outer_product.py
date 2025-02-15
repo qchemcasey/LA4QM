@@ -1,6 +1,7 @@
 import numpy as np
 
 def outer_product(ket, bra):
+    # Compute the outer product of a ket and a bra
     return np.outer(ket, bra)   
 
 # Example
