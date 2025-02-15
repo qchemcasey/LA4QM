@@ -2,7 +2,8 @@ import numpy as np
 
 def outer_product(ket, bra):
     # Compute the outer product of a ket and a bra
-    return np.outer(ket, bra)   
+    outer_prod = np.outer(ket, bra)
+    return outer_prod 
 
 # Example
 ket = np.array([[1],[1j]])
