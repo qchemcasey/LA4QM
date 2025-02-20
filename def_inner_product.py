@@ -12,8 +12,8 @@ def inner_product(bra, ket):
 
 
 # Test
-ket = np.array([[1],[1j]])
-bra = np.array([[1,-1j]])
+#ket = np.array([[1],[1j]])
+#bra = np.array([[1,-1j]])
 
-print(inner_product(bra, ket))  # Expected result: 3*1 + 4*2 = 11
-print(ket.shape[0], bra.shape[1])  # Expected result: 2 2
+#print(inner_product(bra, ket))  # Expected result: 3*1 + 4*2 = 11
+#print(ket.shape[0], bra.shape[1])  # Expected result: 2 2

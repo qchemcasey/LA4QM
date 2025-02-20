@@ -6,6 +6,6 @@ def outer_product(ket, bra):
     return outer_prod 
 
 # Example
-ket = np.array([[1],[1j]])
-bra = np.array([[1,-1j]])
-print(outer_product(ket, bra))
+#ket = np.array([[1],[1j]])
+#bra = np.array([[1,-1j]])
+#print(outer_product(ket, bra))
