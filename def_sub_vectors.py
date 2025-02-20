@@ -30,10 +30,10 @@ def subtract_vectors(*vectors):
 
 # Test
 ket1 = np.array([[1], [0]])
-ket2 = np.array([[0], [1]])
+ket2 = np.array([[1],[1j]])
 
-bra1 = np.array([[1, 0]])
-bra2 = np.array([[0, 1]])
+bra1 = np.array([[1,-1j]])
+bra2 = np.array([[1, 0]])
 
 print(subtract_vectors(ket1, ket2))  # Should output [[1], [-1]]
 print(subtract_vectors(bra1, bra2))  # Should output [[1, -1]]

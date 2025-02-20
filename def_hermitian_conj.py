@@ -29,11 +29,11 @@ def hermitian_conj(*vectors):
 
 
 # Test
-v1 = np.array([[1], [0]])  # Column vector |ψ⟩
-v2 = np.array([[1, 0]])    # Row vector ⟨ψ|
-matrix = np.array([[1, 2, 3], [4, 5, 6], [7,8,9]])  # Matrix A
+ket = np.array([[1],[1j]])
+bra = np.array([[1,-1j]])
+matrix = np.array([[1+1j, 2, 3], [4, 5, 6], [7,8,9]])  # Matrix A
 
 
-results = hermitian_conj(v1, v2, matrix)
+results = hermitian_conj(ket, bra, matrix)
 for res in results:
     print(res, "\n") 

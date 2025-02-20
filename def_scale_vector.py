@@ -15,9 +15,9 @@ def scale_vector(vector, scalar):
 
 
 # Test
-ket1 = np.array([[1], [0]])
-bra1 = np.array([[1, 0]])
+ket = np.array([[1],[1j]])
+bra = np.array([[1,-1j]])
 
-print(scale_vector(ket1, 2))  # Should output [[2], [0]]
-print(scale_vector(bra1, 2))  # Should output [[2, 0]]
+print(scale_vector(ket, 2))  # Should output [[2], [0]]
+print(scale_vector(bra, 2))  # Should output [[2, 0]]
 

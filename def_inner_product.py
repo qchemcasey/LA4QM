@@ -12,8 +12,8 @@ def inner_product(bra, ket):
 
 
 # Test
-ket = np.array([[1], [2]])  # Column vector (2 x 1)
-bra = np.array([[3, 4]])    # Row vector (1 x 2), Hermitian conjugate of |ψ⟩
+ket = np.array([[1],[1j]])
+bra = np.array([[1,-1j]])
 
 print(inner_product(bra, ket))  # Expected result: 3*1 + 4*2 = 11
 print(ket.shape[0], bra.shape[1])  # Expected result: 2 2
